@@ -16,7 +16,7 @@ String pet= JOptionPane.showInputDialog("Okay, " +name+ ". What pet would you li
 			//    (eg: cuddle, food, water, take a walk, groom, clean up poop).
 			//    Make sure to customize the title and question too.
 			int task = JOptionPane.showOptionDialog(null, "What do you want to do to make your " +pet+ " happy?" , "Title", 0, JOptionPane.INFORMATION_MESSAGE, null,
-						new String[] { "Cuddle", "Play", "Take a walk" }, null);
+						new String[] { "Cuddle", "Play", "feed" }, null);
 
 			// 5. Use user input to call the appropriate method created in step 4.
 
@@ -29,10 +29,14 @@ String pet= JOptionPane.showInputDialog("Okay, " +name+ ". What pet would you li
 	//    Each method should create a pop-up with the pet's response (eg. cat might purr when pet), 
 	//    and INCREMENT the pet's happiness Level.
 static void cuddle () {
-	happinessLevel= happinessLevel +4;
+	happinessLevel= happinessLevel +3;
 }
-
-
+static void feed () {
+	happinessLevel= happinessLevel +5;
+}
+static void play () {
+	happinessLevel= happinessLevel +6;
+}
 
 
 
